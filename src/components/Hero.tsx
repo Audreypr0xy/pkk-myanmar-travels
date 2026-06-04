@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon, ChevronDownIcon } from 'lucide-react';
 export function Hero() {
@@ -71,8 +72,8 @@ export function Hero() {
           }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4">
           
-          <a
-            href="#destinations"
+          <Link
+            to="/#destinations"
             className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold hover:bg-brand-greenDark transition-colors shadow-lg">
             
             View Tour Packages
@@ -80,13 +81,13 @@ export function Hero() {
               size={18}
               className="group-hover:translate-x-1 transition-transform" />
             
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-brand-greenDark transition-colors">
             
             Contact Us
-          </a>
+          </Link>
         </motion.div>
       </div>
 
