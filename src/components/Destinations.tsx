@@ -92,7 +92,7 @@ export function Destinations() {
                     : 'text-neutral-500 hover:text-neutral-800'
                 }`}
               >
-                {t === 'outbound' ? '✈️  Outbound Tours' : '🇲🇲  Inbound Tours'}
+                {t === 'outbound' ? 'Outbound Tours' : 'Inbound Tours'}
               </button>
             ))}
           </div>
