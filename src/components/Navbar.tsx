@@ -9,6 +9,7 @@ const links = [
   { label: 'Services',     to: '/services' },
   { label: 'Packages',     to: '/packages' },
   { label: 'Destinations', to: '/destinations' },
+  { label: 'Visa',         to: '/visa' },
   { label: 'About Us',     to: '/about' },
   { label: 'Contact',      to: '/contact' },
 ];
@@ -60,7 +61,7 @@ export function Navbar() {
             );
           })}
           <Link
-            to="/contact"
+            to="/enquiry"
             className="px-5 py-2.5 rounded-full bg-brand-green text-white text-sm font-semibold hover:bg-brand-greenDark transition-colors"
           >
             Book Now
@@ -100,7 +101,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                to="/contact"
+                to="/enquiry"
                 onClick={() => setOpen(false)}
                 className="mt-4 text-center px-5 py-3 rounded-full bg-brand-green text-white font-semibold"
               >

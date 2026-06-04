@@ -11,6 +11,8 @@ import { Destinations } from './components/Destinations';
 import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { AboutUs } from './components/AboutUs';
+import { EnquiryForm } from './components/EnquiryForm';
+import { VisaServices } from './components/VisaServices';
 
 const pageVariants = {
   initial: { opacity: 0, y: 16 },
@@ -55,6 +57,12 @@ function AnimatedRoutes() {
         } />
         <Route path="/contact" element={
           <PageWrapper><div className="pt-20"><Contact /></div></PageWrapper>
+        } />
+        <Route path="/visa" element={
+          <PageWrapper><div className="pt-20"><VisaServices /></div></PageWrapper>
+        } />
+        <Route path="/enquiry" element={
+          <PageWrapper><div className="pt-20"><EnquiryForm /></div></PageWrapper>
         } />
         <Route path="/about" element={
           <PageWrapper><AboutUs /></PageWrapper>
