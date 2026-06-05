@@ -22,7 +22,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-white pt-24 pb-16">
 
-        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
+        <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-[1.15] mb-6">
           <motion.span
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4">
           
           <Link
-            to="/#destinations"
+            to="/destinations"
             className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold hover:bg-brand-greenDark transition-colors shadow-lg">
             
             View Tour Packages

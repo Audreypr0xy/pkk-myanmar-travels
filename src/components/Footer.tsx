@@ -5,9 +5,9 @@ import { Logo } from './Logo';
 
 const quickLinks = [
   { label: 'Home',         to: '/' },
-  { label: 'Services',     to: '/#services' },
-  { label: 'Packages',     to: '/#packages' },
-  { label: 'Destinations', to: '/#destinations' },
+  { label: 'Services',     to: '/services' },
+  { label: 'Packages',     to: '/packages' },
+  { label: 'Destinations', to: '/destinations' },
   { label: 'Visa Services',to: '/visa' },
   { label: 'About Us',     to: '/about' },
   { label: 'Contact',      to: '/contact' },
