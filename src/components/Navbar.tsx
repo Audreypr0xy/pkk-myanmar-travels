@@ -10,6 +10,7 @@ const links = [
   { label: 'Destinations', to: '/destinations' },
   { label: 'Visa',         to: '/visa' },
   { label: 'About Us',     to: '/about' },
+  { label: 'Blog',         to: '/blog' },
   { label: 'Contact',      to: '/contact' },
 ];
 

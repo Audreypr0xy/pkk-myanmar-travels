@@ -13,6 +13,7 @@ import { Contact } from './components/Contact';
 import { AboutUs } from './components/AboutUs';
 import { EnquiryForm } from './components/EnquiryForm';
 import { VisaServices } from './components/VisaServices';
+import { Blog } from './components/Blog';
 import { NotFound } from './components/NotFound';
 
 const pageVariants = {
@@ -68,6 +69,9 @@ function AnimatedRoutes() {
         } />
         <Route path="/about" element={
           <PageWrapper><AboutUs /></PageWrapper>
+        } />
+        <Route path="/blog" element={
+          <PageWrapper><div className="pt-20"><Blog /></div></PageWrapper>
         } />
         <Route path="/testimonials" element={
           <PageWrapper><div className="pt-20"><Testimonials /></div></PageWrapper>
