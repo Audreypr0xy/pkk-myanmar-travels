@@ -54,14 +54,31 @@ export function EnquiryForm() {
     });
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
+    try {
+      const res = await fetch('https://formspree.io/f/xeewqrrw', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        setForm({
+          firstName: '', lastName: '', email: '', phone: '',
+          destination: '', duration: '', adults: '1', children: '0',
+          infants: '0', note: '', newsletter: false,
+        });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        alert('Something went wrong. Please try again or contact us directly on Facebook.');
+      }
+    } catch {
+      alert('Network error. Please check your connection and try again.');
+    } finally {
       setSubmitting(false);
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 900);
+    }
   };
 
   return (

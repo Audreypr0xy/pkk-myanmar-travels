@@ -13,6 +13,7 @@ import { Contact } from './components/Contact';
 import { AboutUs } from './components/AboutUs';
 import { EnquiryForm } from './components/EnquiryForm';
 import { VisaServices } from './components/VisaServices';
+import { NotFound } from './components/NotFound';
 
 const pageVariants = {
   initial: { opacity: 0, y: 16 },
@@ -44,11 +45,12 @@ function AnimatedRoutes() {
           <PageWrapper>
             <Hero />
             <StatsBar />
+            <Services />
+            <Testimonials />
+            <Contact />
           </PageWrapper>
         } />
-        <Route path="/services" element={
-          <PageWrapper><div className="pt-20"><Services /></div></PageWrapper>
-        } />
+
         <Route path="/packages" element={
           <PageWrapper><div className="pt-20"><Packages /></div></PageWrapper>
         } />
@@ -69,6 +71,9 @@ function AnimatedRoutes() {
         } />
         <Route path="/testimonials" element={
           <PageWrapper><div className="pt-20"><Testimonials /></div></PageWrapper>
+        } />
+        <Route path="*" element={
+          <PageWrapper><NotFound /></PageWrapper>
         } />
       </Routes>
     </AnimatePresence>
