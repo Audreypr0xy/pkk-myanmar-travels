@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   MapPinIcon,
   StarIcon,
@@ -8,6 +8,8 @@ import {
   ShipIcon,
   GlobeIcon,
   SunIcon,
+  ListChecksIcon,
+  XIcon,
 } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 
@@ -80,7 +82,49 @@ const packages = [
   },
 ];
 
+// ── Outbound program details ─────────────────────────────────────
+type ProgramItem = { name: string; description: string };
+const packagePrograms: Record<string, ProgramItem[]> = {
+  'Pilgrimage Tours': [
+    { name: 'Buddha Gaya', description: 'Visit the Mahabodhi Temple, the site of Buddha\u2019s enlightenment, plus the Great Buddha Statue and meditation centers.' },
+    { name: 'Sri Lanka', description: 'Sacred tooth relic at Kandy, ancient stupas of Anuradhapura, and the cave temples of Dambulla.' },
+    { name: 'Lumbini', description: 'Buddha\u2019s birthplace in Nepal, featuring the Maya Devi Temple and the Ashoka Pillar.' },
+    { name: 'Varanasi', description: 'Sunrise boat ride on the Ganges, Sarnath (Buddha\u2019s first sermon site), and evening Ganga Aarti ceremony.' },
+  ],
+  'Asia Tour Packages': [
+    { name: 'Japan', description: 'Tokyo\u2019s modern skyline, Kyoto\u2019s temples, and a scenic ride on the Shinkansen bullet train.' },
+    { name: 'Singapore', description: 'Gardens by the Bay, Sentosa Island, Marina Bay Sands, and world-class shopping on Orchard Road.' },
+    { name: 'Thailand', description: 'Bangkok\u2019s Grand Palace, floating markets, and beach time in Pattaya.' },
+    { name: 'Kashmir', description: 'Houseboat stay on Dal Lake, Gulmarg gondola ride, and the Mughal Gardens of Srinagar.' },
+  ],
+  'Europe Tours': [
+    { name: 'Switzerland', description: 'Jungfraujoch "Top of Europe", Lake Lucerne, and scenic alpine train journeys.' },
+    { name: 'France', description: 'Eiffel Tower, Louvre Museum, Seine River cruise, and the palace of Versailles.' },
+    { name: 'Italy', description: 'Colosseum in Rome, canals of Venice, and Renaissance art in Florence.' },
+    { name: 'Germany', description: 'Neuschwanstein Castle, Rhine Valley, and historic Berlin landmarks.' },
+  ],
+  'Cruise Trips': [
+    { name: 'Mediterranean', description: 'Island-hopping through Greece, Italy, and Spain aboard a luxury cruise liner.' },
+    { name: 'SE Asia Cruises', description: 'Coastal stops across Thailand, Vietnam, and Malaysia with onboard dining and entertainment.' },
+    { name: 'All-inclusive', description: 'Meals, entertainment, and select shore excursions bundled into one seamless fare.' },
+    { name: 'Shore Tours', description: 'Guided excursions at each port of call, from historic old towns to tropical beaches.' },
+  ],
+  'Myanmar Destinations': [
+    { name: 'Kyaiktiyo', description: 'The sacred Golden Rock pagoda, precariously balanced on a cliff edge, reached by truck and on foot.' },
+    { name: 'Bagan', description: 'Thousands of ancient temples across the plains, best seen at sunrise by hot air balloon.' },
+    { name: 'Inle Lake', description: 'Floating gardens, leg-rowing fishermen, and stilt-house villages on a scenic lake.' },
+    { name: 'Mandalay', description: 'Royal palaces, U Bein Bridge sunset, and the ancient capitals of Amarapura and Inwa.' },
+  ],
+  'Group & Family Tours': [
+    { name: 'Family Friendly', description: 'Itineraries paced for all ages, with kid-friendly activities and comfortable accommodations.' },
+    { name: 'Corporate Trips', description: 'Team-building retreats and incentive travel packages tailored for companies.' },
+    { name: 'Custom Groups', description: 'Fully customizable routes and schedules for groups of friends, clubs, or associations.' },
+    { name: 'Full Support', description: 'Dedicated tour guide, 24/7 assistance, and hassle-free logistics throughout the trip.' },
+  ],
+};
+
 export function Packages() {
+  const [activeProgram, setActiveProgram] = useState<string | null>(null);
   return (
     <section id="packages" className="py-20 md:py-28 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -143,22 +187,93 @@ export function Packages() {
                     ))}
                   </div>
 
-                  <a
-                    href="#contact"
-                    className="mt-auto inline-flex items-center gap-2 text-brand-green font-semibold text-sm group/link"
-                  >
-                    Enquire Now
-                    <ArrowRightIcon
-                      size={15}
-                      className="group-hover/link:translate-x-1 transition-transform"
-                    />
-                  </a>
+                  <div className="mt-auto flex items-center justify-between gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setActiveProgram(p.title)}
+                      className="inline-flex items-center gap-1.5 text-brand-green font-semibold text-sm group/link"
+                    >
+                      <ListChecksIcon size={15} />
+                      View Program Details
+                    </button>
+
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center gap-2 text-brand-green font-semibold text-sm group/link"
+                    >
+                      Enquire Now
+                      <ArrowRightIcon
+                        size={15}
+                        className="group-hover/link:translate-x-1 transition-transform"
+                      />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             );
           })}
         </div>
       </div>
+
+      {/* ── Program Details Modal ── */}
+      <AnimatePresence>
+        {activeProgram && packagePrograms[activeProgram] && (
+          <motion.div
+            key="package-program-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-8"
+            onClick={() => setActiveProgram(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 24, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 24, scale: 0.98 }}
+              transition={{ duration: 0.25 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-7 md:p-8 shadow-2xl relative"
+            >
+              <button
+                type="button"
+                onClick={() => setActiveProgram(null)}
+                className="absolute top-5 right-5 w-8 h-8 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center text-neutral-500 transition-colors"
+                aria-label="Close"
+              >
+                <XIcon size={16} />
+              </button>
+
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand-green mb-1">
+                Program Details
+              </p>
+              <h3 className="font-display font-bold text-2xl md:text-3xl text-neutral-900 mb-6">
+                {activeProgram}
+              </h3>
+
+              <div className="space-y-5">
+                {packagePrograms[activeProgram].map((item) => (
+                  <div key={item.name} className="flex gap-3">
+                    <MapPinIcon size={16} className="text-brand-green shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold text-neutral-900 text-sm mb-1">{item.name}</h4>
+                      <p className="text-neutral-600 text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="#contact"
+                onClick={() => setActiveProgram(null)}
+                className="mt-7 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-green text-white font-semibold text-sm hover:bg-brand-greenDark transition-colors shadow-card"
+              >
+                Enquire About This Tour
+                <ArrowRightIcon size={15} />
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

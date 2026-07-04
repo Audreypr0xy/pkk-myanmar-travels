@@ -8,6 +8,10 @@ import {
   MapPinIcon,
   PhoneCallIcon,
   AwardIcon,
+  EyeIcon,
+  TargetIcon,
+  QuoteIcon,
+  CheckCircle2Icon,
   Globe2Icon as GlobeIcon,
 } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
@@ -86,6 +90,145 @@ export function AboutUs() {
             </p>
 
           </motion.div>
+        </div>
+      </div>
+
+      {/* ── Welcome / Vision / Mission / Why Choose Us / Commitment ── */}
+      <div className="py-20 md:py-28 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-5 md:px-8">
+
+          {/* Welcome */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <div className="inline-flex items-center gap-2 mb-5 justify-center">
+              <span className="w-8 h-px bg-brand-green" />
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-green">
+                Welcome
+              </span>
+              <span className="w-8 h-px bg-brand-green" />
+            </div>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-neutral-900 leading-tight mb-4">
+              Welcome to <span className="text-brand-green">PKK Myanmar</span>
+            </h2>
+            <p className="text-neutral-600 text-base md:text-lg leading-relaxed">
+              Every journey begins with trust. At PKK Myanmar, we bring the world closer to you —
+              crafting exceptional journeys, authentic experiences, and outstanding service for every traveler.
+            </p>
+          </motion.div>
+
+          {/* Vision & Mission */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl p-8 shadow-card hover:shadow-cardHover transition-shadow duration-300"
+            >
+              <div className="w-12 h-12 rounded-xl bg-brand-greenLight flex items-center justify-center mb-5">
+                <EyeIcon size={22} className="text-brand-green" />
+              </div>
+              <h3 className="font-display font-bold text-xl text-neutral-900 mb-3">Our Vision</h3>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                To be Myanmar's leading and most trusted travel company, inspiring people to explore the
+                world through exceptional journeys, authentic experiences, and outstanding service.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: 0.08 }}
+              className="bg-white rounded-2xl p-8 shadow-card hover:shadow-cardHover transition-shadow duration-300"
+            >
+              <div className="w-12 h-12 rounded-xl bg-brand-greenLight flex items-center justify-center mb-5">
+                <TargetIcon size={22} className="text-brand-green" />
+              </div>
+              <h3 className="font-display font-bold text-xl text-neutral-900 mb-3">Our Mission</h3>
+              <p className="text-neutral-600 text-sm leading-relaxed">
+                At PKK Myanmar, we are committed to delivering world-class travel experiences with
+                professionalism, integrity, and care. We strive to provide safe, reliable, and personalized
+                travel solutions while creating unforgettable memories for every traveler. Through innovation,
+                excellence, and a customer-first approach, we aim to exceed expectations and build lasting
+                relationships.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Motto */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-3xl bg-brand-green px-8 py-12 md:py-14 text-center mb-16 overflow-hidden"
+          >
+            <QuoteIcon size={36} className="text-white/25 mx-auto mb-4" />
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand-greenLight mb-3">
+              Our Motto
+            </p>
+            <h3 className="font-display font-bold text-2xl md:text-3xl text-white italic">
+              "Your Satisfaction Is Our Victory."
+            </h3>
+          </motion.div>
+
+          {/* Why Choose Us */}
+          <div className="mb-16">
+            <SectionHeader
+              eyebrow="Why Choose Us"
+              title="Why Choose PKK Myanmar?"
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {[
+                'Professional & Experienced Travel Experts',
+                'Personalized Travel Solutions',
+                'Safe & Reliable Services',
+                'Quality Experiences at Great Value',
+                'Dedicated Customer Support',
+                'Trusted by Travelers',
+              ].map((item, i) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.45, delay: i * 0.06 }}
+                  className="flex items-start gap-3 bg-white rounded-xl p-5 shadow-card"
+                >
+                  <CheckCircle2Icon size={20} className="text-brand-green shrink-0 mt-0.5" />
+                  <p className="text-neutral-700 text-sm font-medium leading-relaxed">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Our Commitment */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <div className="w-14 h-14 rounded-full bg-brand-greenLight flex items-center justify-center mx-auto mb-5">
+              <HeartHandshakeIcon size={26} className="text-brand-green" />
+            </div>
+            <h3 className="font-display font-bold text-2xl md:text-3xl text-neutral-900 mb-4">
+              Our Commitment
+            </h3>
+            <p className="text-neutral-600 text-base leading-relaxed">
+              Every journey begins with trust. At PKK Myanmar, we are dedicated to turning your travel
+              dreams into unforgettable experiences. Your happiness, comfort, and satisfaction are at the
+              heart of everything we do — because your satisfaction is our victory.
+            </p>
+          </motion.div>
+
         </div>
       </div>
 
