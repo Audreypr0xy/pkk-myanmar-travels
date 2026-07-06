@@ -361,7 +361,7 @@ export function Destinations() {
                     >
                       <DestinationCard {...d} duration={d.duration} index={i} />
                       {outboundPrograms[d.title] && (
-                        <span className="pointer-events-none absolute inset-x-0 top-0 h-52 rounded-t-2xl overflow-hidden flex items-end p-4 opacity-0 group-hover/wrap:opacity-100 transition-opacity duration-300">
+                        <span className="pointer-events-none absolute inset-0 rounded-2xl overflow-hidden flex items-center justify-center bg-black/0 group-hover/wrap:bg-black/25 transition-colors duration-300">
                           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-green text-xs font-bold shadow-sm">
                             <MapIcon size={12} />
                             View Program Details
@@ -386,7 +386,7 @@ export function Destinations() {
                     >
                       <DestinationCard {...d} duration={d.duration} index={i} />
                       {outboundPrograms[d.title] && (
-                        <span className="pointer-events-none absolute inset-x-0 top-0 h-52 rounded-t-2xl overflow-hidden flex items-end p-4 opacity-0 group-hover/wrap:opacity-100 transition-opacity duration-300">
+                        <span className="pointer-events-none absolute inset-0 rounded-2xl overflow-hidden flex items-center justify-center bg-black/0 group-hover/wrap:bg-black/25 transition-colors duration-300">
                           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-green text-xs font-bold shadow-sm">
                             <MapIcon size={12} />
                             View Program Details
@@ -450,7 +450,7 @@ export function Destinations() {
                     >
                       <DestinationCard {...d} duration={d.duration} index={i} />
                       {outboundPrograms[d.title] && (
-                        <span className="pointer-events-none absolute inset-x-0 top-0 h-52 rounded-t-2xl overflow-hidden flex items-end p-4 opacity-0 group-hover/wrap:opacity-100 transition-opacity duration-300">
+                        <span className="pointer-events-none absolute inset-0 rounded-2xl overflow-hidden flex items-center justify-center bg-black/0 group-hover/wrap:bg-black/25 transition-colors duration-300">
                           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-green text-xs font-bold shadow-sm">
                             <MapIcon size={12} />
                             View Program Details
@@ -501,7 +501,7 @@ export function Destinations() {
                     >
                       <DestinationCard {...d} duration={d.duration} index={i} />
                       {inboundPrograms[d.title] && (
-                        <span className="pointer-events-none absolute inset-x-0 top-0 h-52 rounded-t-2xl overflow-hidden flex items-end p-4 opacity-0 group-hover/wrap:opacity-100 transition-opacity duration-300">
+                        <span className="pointer-events-none absolute inset-0 rounded-2xl overflow-hidden flex items-center justify-center bg-black/0 group-hover/wrap:bg-black/25 transition-colors duration-300">
                           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-green text-xs font-bold shadow-sm">
                             <MapIcon size={12} />
                             View Program Details

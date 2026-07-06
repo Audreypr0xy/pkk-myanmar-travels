@@ -46,7 +46,7 @@ export function Footer() {
             </a>
           </div>
 
-          {/* Quick Links */}
+
           <div>
             <h4 className="font-display font-bold text-lg mb-5">Quick Links</h4>
             <ul className="space-y-3">
@@ -63,7 +63,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+
           <div>
             <h4 className="font-display font-bold text-lg mb-5">Our Services</h4>
             <ul className="space-y-3">
@@ -73,7 +73,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+
           <div>
             <h4 className="font-display font-bold text-lg mb-5">Contact</h4>
             <ul className="space-y-4 text-sm text-white/80">

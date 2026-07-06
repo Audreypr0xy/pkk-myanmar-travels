@@ -61,7 +61,7 @@ export function AboutUs() {
   return (
     <section id="about" className="bg-white">
 
-      {/* ── Hero Banner ── */}
+      
       <div className="relative h-72 md:h-96 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1733913128715-ddfac4bcf9fd?auto=format&fit=crop&w=2400&q=80"
@@ -93,11 +93,11 @@ export function AboutUs() {
         </div>
       </div>
 
-      {/* ── Welcome / Vision / Mission / Why Choose Us / Commitment ── */}
+      
       <div className="py-20 md:py-28 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
 
-          {/* Welcome */}
+          
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export function AboutUs() {
             </p>
           </motion.div>
 
-          {/* Vision & Mission */}
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -161,7 +161,7 @@ export function AboutUs() {
             </motion.div>
           </div>
 
-          {/* Motto */}
+        
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -178,7 +178,7 @@ export function AboutUs() {
             </h3>
           </motion.div>
 
-          {/* Why Choose Us */}
+          
           <div className="mb-16">
             <SectionHeader
               eyebrow="Why Choose Us"
@@ -208,7 +208,7 @@ export function AboutUs() {
             </div>
           </div>
 
-          {/* Our Commitment */}
+         
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -232,12 +232,12 @@ export function AboutUs() {
         </div>
       </div>
 
-      {/* ── Our Story ── */}
+      
       <div className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-            {/* Image */}
+           
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -252,14 +252,14 @@ export function AboutUs() {
                   className="w-full h-80 md:h-[480px] object-cover"
                 />
               </div>
-              {/* Floating badge */}
+              
               <div className="absolute -bottom-5 -right-5 bg-brand-green text-white rounded-2xl px-6 py-4 shadow-cardHover text-center">
                 <div className="font-display font-bold text-3xl leading-none">14+</div>
                 <div className="text-xs font-medium text-white/85 mt-1">Years of Trust</div>
               </div>
             </motion.div>
 
-            {/* Text */}
+           
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -305,7 +305,7 @@ export function AboutUs() {
         </div>
       </div>
 
-      {/* ── Stats Bar ── */}
+     
       <div className="bg-brand-green">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex flex-row divide-x divide-white/20">
@@ -333,7 +333,7 @@ export function AboutUs() {
         </div>
       </div>
 
-      {/* ── Our Values ── */}
+     
       <div className="py-20 md:py-28 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <SectionHeader
@@ -367,7 +367,7 @@ export function AboutUs() {
         </div>
       </div>
 
-      {/* ── Our Journey Timeline ── */}
+      
       <div className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <SectionHeader
@@ -375,7 +375,7 @@ export function AboutUs() {
             title="A Decade of Memorable Journeys"
           />
           <div className="relative max-w-3xl mx-auto">
-            {/* vertical line */}
+          
             <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-neutral-200" />
             <div className="space-y-10">
               {milestones.map((m, i) => (
@@ -392,7 +392,7 @@ export function AboutUs() {
                       <p className="text-neutral-700 text-sm font-medium">{m.event}</p>
                     </div>
                   </div>
-                  {/* dot */}
+                  
                   <div className="shrink-0 z-10 w-10 h-10 rounded-full bg-brand-green flex items-center justify-center shadow-card">
                     <AwardIcon size={16} className="text-white" />
                   </div>
@@ -408,7 +408,7 @@ export function AboutUs() {
         </div>
       </div>
 
-      {/* ── Team ── */}
+      
       <div className="py-20 md:py-28 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <SectionHeader
@@ -454,7 +454,7 @@ export function AboutUs() {
         </div>
       </div>
 
-      {/* ── CTA Banner ── */}
+   
       <div className="relative overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=2400&q=80"

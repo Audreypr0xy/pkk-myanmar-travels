@@ -82,7 +82,7 @@ const packages = [
   },
 ];
 
-// ── Outbound program details ─────────────────────────────────────
+
 type ProgramItem = { name: string; description: string };
 const packagePrograms: Record<string, ProgramItem[]> = {
   'Pilgrimage Tours': [
@@ -215,7 +215,6 @@ export function Packages() {
         </div>
       </div>
 
-      {/* ── Program Details Modal ── */}
       <AnimatePresence>
         {activeProgram && packagePrograms[activeProgram] && (
           <motion.div

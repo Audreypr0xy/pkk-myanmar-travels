@@ -64,7 +64,7 @@ export function FeatureDestination({
 
         <div>
           <div className="text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-3">
-            Pilgrimage Stops
+        
           </div>
           <div className="flex flex-wrap gap-2">
             {stops.map((s) =>

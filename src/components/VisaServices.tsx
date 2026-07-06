@@ -8,54 +8,55 @@ import {
   CheckCircleIcon,
   GlobeIcon,
 } from 'lucide-react';
+import 'flag-icons/css/flag-icons.min.css';
 import { SectionHeader } from './SectionHeader';
 
 const visaTypes = [
   {
     country: 'Japan',
-    flag: '🇯🇵',
+    code: 'jp',
       type: 'Tourist Visa',
     notes: 'Single & Multiple entry available',
   },
   {
     country: 'South Korea',
-    flag: '🇰🇷',
+    code: 'kr',
       type: 'Tourist Visa',
     notes: 'C-3 Short-term visit visa',
   },
   {
     country: 'China',
-    flag: '🇨🇳',
+    code: 'cn',
       type: 'Tourist Visa (L)',
     notes: 'Single & double entry',
   },
   {
     country: 'Europe (Schengen)',
-    flag: '🇪🇺',
+    code: 'eu',
       type: 'Schengen Visa',
     notes: 'Covers 26 European countries',
   },
   {
     country: 'India',
-    flag: '🇮🇳',
+    code: 'in',
       type: 'Tourist / Pilgrimage Visa',
     notes: 'e-Visa & sticker visa available',
   },
   {
     country: 'Thailand',
-    flag: '🇹🇭',
+    code: 'th',
       type: 'Tourist Visa (TR)',
     notes: 'Single & multiple entry',
   },
   {
     country: 'Malaysia',
-    flag: '🇲🇾',
+    code: 'my',
       type: 'Tourist Visa',
     notes: 'eNTRI & sticker visa',
   },
   {
     country: 'Singapore',
-    flag: '🇸🇬',
+    code: 'sg',
       type: 'Tourist Visa',
     notes: 'Single & multiple entry',
   },
@@ -102,7 +103,6 @@ export function VisaServices() {
           description="PKK Myanmar Travels helps you obtain visas for all major destinations. Our experienced team handles your application with care, so you can focus on planning your trip."
         />
 
-        {/* Why Choose Us */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
           {whyUs.map((item, i) => {
             const Icon = item.icon;
@@ -125,7 +125,6 @@ export function VisaServices() {
           })}
         </div>
 
-        {/* Visa Types Grid */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
             <GlobeIcon size={20} className="text-brand-green" />
@@ -142,7 +141,9 @@ export function VisaServices() {
                 className="bg-white rounded-2xl p-5 shadow-card hover:shadow-cardHover transition-all duration-300 group border border-transparent hover:border-brand-green/20"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-3xl">{v.flag}</span>
+                  <span className="w-9 h-9 rounded-full overflow-hidden shrink-0 border border-neutral-100 bg-neutral-50 flex items-center justify-center">
+                    <span className={`fi fi-${v.code} !w-full !h-full !rounded-none bg-cover bg-center`} />
+                  </span>
                   <div>
                     <h4 className="font-display font-bold text-base text-neutral-900 leading-tight">{v.country}</h4>
                     <span className="text-xs text-brand-green font-semibold">{v.type}</span>
@@ -162,7 +163,6 @@ export function VisaServices() {
           </p>
         </div>
 
-        {/* How It Works */}
         <div className="bg-brand-greenDark rounded-3xl p-8 md:p-12 text-white">
           <h3 className="font-display font-bold text-2xl md:text-3xl text-center mb-10">
             How It Works

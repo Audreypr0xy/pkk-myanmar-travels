@@ -38,7 +38,7 @@ export function DestinationCard({
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
         ) : (
-          // Placeholder when image fails
+
           <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-brand-greenLight to-neutral-100">
             <ImageOffIcon size={32} className="text-brand-green/40 mb-2" />
             <span className="text-xs text-neutral-400">{title}</span>

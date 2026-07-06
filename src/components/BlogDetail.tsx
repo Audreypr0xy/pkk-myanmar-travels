@@ -16,7 +16,7 @@ export function BlogDetail() {
       <div className="pt-32 pb-20 text-center">
         <p className="text-2xl font-display font-bold text-neutral-900 mb-4">Post not found</p>
         <Link to="/blog" className="text-brand-green font-semibold hover:underline">
-          ← Back to Blog
+         
         </Link>
       </div>
     );
@@ -27,7 +27,7 @@ export function BlogDetail() {
 
   return (
     <article className="pt-24 pb-20 bg-white">
-      {/* Hero Image */}
+      
       <div className="relative h-72 md:h-[480px] overflow-hidden mb-0">
         <img
           src={post.image}
@@ -36,7 +36,7 @@ export function BlogDetail() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-        {/* Back button */}
+      
         <button
           onClick={() => navigate('/blog')}
           className="absolute top-6 left-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm text-neutral-800 text-sm font-semibold hover:bg-white transition-colors shadow-md"
@@ -45,7 +45,6 @@ export function BlogDetail() {
           Back to Blog
         </button>
 
-        {/* Title overlay */}
         <div className="absolute bottom-0 inset-x-0 p-6 md:p-12 max-w-4xl mx-auto">
           <span
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold mb-4 ${categoryColors[post.category]}`}
@@ -67,9 +66,8 @@ export function BlogDetail() {
         </div>
       </div>
 
-      {/* Content */}
+     
       <div className="max-w-3xl mx-auto px-5 md:px-8 mt-12">
-        {/* Excerpt / Lead */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,7 +77,7 @@ export function BlogDetail() {
           {post.excerpt}
         </motion.p>
 
-        {/* Sections */}
+  
         {post.sections.map((section, i) => (
           <motion.div
             key={i}
@@ -100,7 +98,6 @@ export function BlogDetail() {
           </motion.div>
         ))}
 
-        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -122,7 +119,6 @@ export function BlogDetail() {
           </Link>
         </motion.div>
 
-        {/* Prev / Next Navigation */}
         <div className="mt-14 pt-8 border-t border-neutral-100 grid grid-cols-1 md:grid-cols-2 gap-4">
           {prevPost ? (
             <Link

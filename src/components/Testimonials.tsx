@@ -95,7 +95,7 @@ export function Testimonials() {
         background: 'linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #388E3C 100%)',
       }}
     >
-      {/* Decorative circles */}
+     
       <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/5 pointer-events-none" />
       <div className="absolute -bottom-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-white/5 pointer-events-none" />
 
@@ -112,7 +112,7 @@ export function Testimonials() {
             What Our Travelers Say
           </h2>
           <p className="text-white/70 text-base max-w-xl mx-auto">
-            ကျွန်ုပ်တို့နှင့်အတူ ခရီးသွားခဲ့သော ဖောက်သည်များ၏ အစစ်အမှန် သုံးသပ်ချက်များ
+        
           </p>
         </div>
 
@@ -147,7 +147,7 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Controls */}
+      
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={prev}

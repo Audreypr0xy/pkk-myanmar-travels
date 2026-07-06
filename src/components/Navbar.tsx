@@ -27,7 +27,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Reset scroll on page change
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setOpen(false);
@@ -44,7 +44,6 @@ export function Navbar() {
           <Logo variant={isLight ? 'light' : 'dark'} />
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => {
             const active = location.pathname === l.to;
@@ -68,7 +67,6 @@ export function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile menu button */}
         <button
           onClick={() => setOpen((v) => !v)}
           className={`lg:hidden p-2 rounded-md ${isLight ? 'text-white' : 'text-neutral-800'}`}
@@ -78,7 +76,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div

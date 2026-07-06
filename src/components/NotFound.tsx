@@ -12,12 +12,12 @@ export function NotFound() {
         transition={{ duration: 0.6 }}
         className="max-w-lg w-full"
       >
-        {/* Big 404 */}
+        
         <div className="font-display font-bold text-[120px] md:text-[160px] leading-none text-brand-green/10 select-none">
           404
         </div>
 
-        {/* Icon */}
+      
         <div className="w-20 h-20 rounded-full bg-brand-green/10 flex items-center justify-center mx-auto -mt-6 mb-6">
           <span className="text-4xl">🌏</span>
         </div>
@@ -30,7 +30,7 @@ export function NotFound() {
           Let's get you back on track.
         </p>
 
-        {/* Buttons */}
+      
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
           <Link
             to="/"
@@ -47,7 +47,7 @@ export function NotFound() {
           </Link>
         </div>
 
-        {/* Quick contact */}
+      
         <div className="border-t border-neutral-200 pt-8 flex flex-col sm:flex-row items-center justify-center gap-5 text-sm text-neutral-500">
           <a href="tel:+959795884090" className="inline-flex items-center gap-2 hover:text-brand-green transition-colors">
             <PhoneIcon size={15} />

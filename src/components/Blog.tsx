@@ -27,7 +27,7 @@ export function Blog() {
           description="From pilgrimage guides to destination highlights — find everything you need to plan your next unforgettable journey with PKK Myanmar Travels & Tours."
         />
 
-        {/* Category Filter */}
+        
         <div className="flex flex-wrap gap-2 justify-center mb-12">
           {categories.map((cat) => (
             <button
@@ -44,7 +44,6 @@ export function Blog() {
           ))}
         </div>
 
-        {/* Featured Post */}
         {showFeatured && (
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -97,7 +96,6 @@ export function Blog() {
           </motion.div>
         )}
 
-        {/* Grid Posts */}
         {filtered.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {filtered.map((post, i) => (
