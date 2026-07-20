@@ -1,5 +1,5 @@
 import React from 'react';
-import { FacebookIcon, MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react';
+import { FacebookIcon, LinkedinIcon, MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 
@@ -35,15 +35,26 @@ export function Footer() {
             <p className="mt-5 text-sm text-white/70 leading-relaxed italic">
               "Your Satisfaction is Our Victory"
             </p>
-            <a
-              href="https://www.facebook.com/pkktravel3377"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-brand-green transition-colors"
-              aria-label="Facebook"
-            >
-              <FacebookIcon size={18} />
-            </a>
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/pkktravel3377"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-brand-green transition-colors"
+                aria-label="Facebook"
+              >
+                <FacebookIcon size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/pkk-myanmar-travel-tour/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-brand-green transition-colors"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon size={18} />
+              </a>
+            </div>
           </div>
 
 
@@ -94,6 +105,69 @@ export function Footer() {
             </ul>
           </div>
 
+        </div>
+      </div>
+
+      {/* Certified & Trusted By */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-10">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-white/50 mb-6">
+            Certified & Trusted By
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            <a
+              href="https://myanmartourismfederation.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/95 rounded-xl px-4 py-3 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              aria-label="Myanmar Tourism Federation"
+            >
+              <img
+                src="/partner-mtf-logo.png"
+                alt="Myanmar Tourism Federation"
+                className="h-14 md:h-16 w-auto object-contain"
+              />
+            </a>
+            <a
+              href="https://www.tourismmyanmar.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/95 rounded-xl px-4 py-3 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              aria-label="Myanmar Tourism Marketing"
+            >
+              <img
+                src="/partner-mtm-logo.png"
+                alt="Myanmar Tourism Marketing"
+                className="h-14 md:h-16 w-auto object-contain"
+              />
+            </a>
+            <a
+              href="https://www.umtanet.org/index.php/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/95 rounded-xl px-4 py-3 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              aria-label="Union of Myanmar Travel Association"
+            >
+              <img
+                src="/partner-umta-logo.png"
+                alt="Union of Myanmar Travel Association"
+                className="h-14 md:h-16 w-auto object-contain"
+              />
+            </a>
+            <a
+              href="https://tourism.gov.mm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/95 rounded-xl px-4 py-3 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              aria-label="Ministry of Hotels & Tourism"
+            >
+              <img
+                src="/partner-moht-logo.png"
+                alt="Ministry of Hotels & Tourism"
+                className="h-14 md:h-16 w-auto object-contain"
+              />
+            </a>
+          </div>
         </div>
       </div>
 
